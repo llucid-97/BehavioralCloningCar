@@ -1,3 +1,5 @@
+from keras import applications
+from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Model
 import keras
 import tensorflow as tf
@@ -8,6 +10,10 @@ Model definition only. Stages:
     2: Convolutional Front End
     3: Dense Back end
 """
+input_shape_x = 320
+input_shape_y = 160
+base_model = applications.MobileNet(include_top=False, input_shape=(input_shape_x, input_shape_y, 3))
+print(base_model.summary())
 in0 = keras.layers.Input(shape=[160, 320, 3])  # input
 
 # 1: Preprocessing-----------------------------------------
