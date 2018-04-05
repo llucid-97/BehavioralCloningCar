@@ -118,9 +118,9 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes:
 
 
-| Layer (type)       |          Output Shape        |      NumParams  | 
-|:---------------------:|:---------------------------------------------:|
-| input_1 (InputLayer)    |     (None, 160, 320, 3)   |    0 |         
+| Layer (type)       |          Output Shape        |      NumParams  |
+|:---------------------:|:--------------------------:|:-------------------:|
+| input_1 (InputLayer)    |     (None, 160, 320, 3)   |    0 |
 | RGB_to_HSV (Lambda)     |     (None, 160, 320, 3)    |   0  |       
 | crop (Cropping2D)       |     (None, 90, 320, 3)    |    0   |      
 | BatchNorm_1 (BatchNorma) | (None, 90, 320, 3)      |  12      |  
